@@ -1,0 +1,206 @@
+.fundo_painel{
+    background-color: rgba(255,255,255,0.8);
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.produto_painel{
+    background-color: rgba(43, 42, 42, 0.9);
+    position: fixed;
+    z-index: 200;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 0;
+    max-height: 600px;
+    box-shadow: 0 0 15px -10px #000;
+
+}
+
+.alinha_bnt_fechar{
+    position: fixed;
+    height: 0;
+    max-width: 600px;
+    left: 20px;
+    right: 20px;
+    margin: auto;
+}
+.bnt_fechar_painel{
+    float: right;
+    margin-top: -40px;
+    /*margin-top: -60px;
+    margin-right: -20px;
+    border-radius: 100px;
+    background-color: #333;
+    border: solid 3px #CCC;*/
+}
+
+.margin_alerta{
+    margin-right: 10px;
+}
+
+.barra_rolagem{
+    overflow: auto;
+    padding: 0 20px;
+    height:100%;/* calc(100% - 40px);*/
+}
+.img_conf_unica{
+    
+    margin-top: 20px;
+}
+
+.img_confirmar_compra{
+    margin: 10px 0;
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    min-height: 150px;
+}
+.img_comprar{
+    height: 200px;
+    border-radius: 12px;
+    margin: 0 10px;
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+.quadro_dados{
+    float: left;
+    width: calc(50% - 10px);
+    margin: 5px;
+}
+
+.txt_bnt_conf{
+    font-size: 16px;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    
+}
+.bnt_comprar{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    
+}
+.bnt_comprar_buton{
+    width: 110px;
+    margin: 10px auto;
+}
+/*-----lista de presentes-----------*/
+
+.img_item{
+    height: 130px;
+    border-radius: 7px;
+    background-size: auto 100%;
+    background-position: center;
+    margin: 0 20px;
+}
+
+.lista_presentes{
+    float: left;
+    width: 25%;
+    
+}
+.lista_bloco{
+    background-color: #FFF;
+    width: 190px;
+    min-height: 250px;
+    margin: 15px auto;
+    padding: 15px 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -10px #000;
+    border: solid 0.5px #ccc;
+    cursor: pointer;
+}
+.lista_titulo{
+    font-size: 16px;
+    color: #333;
+    text-align:center;
+    margin: 10px 15px 0 15px;
+}
+.lista_valor{
+    font-size: 18px;
+    color: #535e43;
+    text-align:center;
+    margin:3px 0 0 0;
+}
+.lista_valor span{
+    font-size: 12px;
+}
+
+
+
+
+@media (max-width: 1080px) {
+    .lista_presentes{
+        width: 33.3333%;
+    }
+  }
+  @media (max-width: 750px) {
+    .lista_presentes{
+        width: 50%;
+    }
+  }
+  
+
+  @media (max-width: 472px) {
+    /*.lista_presentes{
+        width: 100%;
+    }*/
+    .lista_bloco{
+        width: auto;
+        margin: 3px;
+    }
+    /*.img_item{
+        height: 190px;
+    }*/
+  }
+
+  @media (max-width:450px){
+    .produto_painel{
+        max-height: none;
+    }
+    .img_confirmar_compra{
+        margin: 10px 5px;
+        width: calc(50% - 10px);
+    }
+    .txt_bnt_conf{
+
+        font-size: 12px;
+    }
+    .bnt_comprar{
+        font-size: 11px;
+    }
+    .img_confirmar_compra{
+        min-height: 200px;
+    }
+    .img_comprar{
+        height: 100px;
+    }
+  }
+
+  @media (max-width: 322px) {
+    /*.lista_presentes{
+        width: 100%;
+    }*/
+    /*.lista_bloco{
+        width: auto;
+        margin: 15px 0;
+    }*/
+    
+  }

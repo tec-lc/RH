@@ -1,0 +1,208 @@
+body{
+  /*font-family:Inter,system-ui,Arial;*/
+  font-family: "Elms Sans", sans-serif;
+  margin:0;
+  overflow-y: hidden; 
+}
+
+.clear{
+  clear:both;
+}
+
+
+
+
+
+/*------padroes ---------------------------*/
+/*---hovers----*/
+
+.itenMenu:hover{
+  transition:0.5s;
+  background-color:#f6f7fb;
+}
+.itenMenu:hover .icone-glo,
+.itenMenu:hover .fontMenu
+{
+  transition:0.5s;
+  fill:#3770E4;
+  color: #3770E4;
+}
+.quadroIcon:hover .icone-glo,
+.quadroIcon:hover .fontIcon
+{
+  transition:0.5s;
+  fill:#3770E4;
+  color: #3770E4;
+}
+
+/*---coresfonte---*/
+.fontIcon,
+.fontMenu,
+.fontMenuTitulo,
+
+.txtTitulo
+{
+  color:#041E49;
+}
+
+
+/*---coresfundo------*/
+#corBacAzul,
+.corBacAzul{
+  background-color:#f6f7fb;
+}
+#corBacBranco,
+.corBacBranco{
+  background-color: #ffffff;
+}
+
+/*---cores bordas--*/
+.menu{border: solid 0.5px;}
+.top{border-bottom: solid 0.5px;}
+.corLinha{
+  border-color: rgba(0,0,0,0.07);
+}
+.sombra{
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+/*--------icones -------*/
+.icon,
+.iconFloat,
+.iconQuadro
+{
+  width: 40px;
+  height: 40px;
+  
+}
+.icone-glo
+{
+  fill:#041E49;
+  
+}
+
+
+
+
+
+
+/*------top ---------------------------*/
+.top{
+  position: fixed;
+  top:0;
+  min-height: 10px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 500;
+}
+.alinhaTop{
+  padding: 5px 20px;
+}
+.quadroTop{
+  float: left;
+  width: 60px;
+}
+.txtTitulo{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*--------------menu----------------------*/
+
+.menu{
+  position: fixed;
+  top: 62px;
+  bottom: 12px;
+  left: 12px;
+  width: 350px;
+  overflow: auto;
+  border-radius:15px;
+  z-index: 600;
+}
+
+.menuLateral{
+  padding: 10px 0;
+  float: left;
+  position: fixed;
+  border-radius: 15px 0 0 0;
+}
+
+.menuMais{
+  padding-top: 21px;
+  float:right;
+  width: calc(100% - 80px);
+}
+
+
+/*---------------dentro menu---------------------*/
+/*----itens de menu icone---*/
+/*.fontMenuTitulo{
+  font-size: 16px;
+  padding: 10px 10px 10px 0;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 0 0 0 50px;
+}*/
+.itenMenu{
+  padding: 0 12px 0 0;
+  border-radius: 7px 0 0 7px;
+  cursor: pointer;
+}
+
+.iconFloat{
+  float: left;
+}
+.fontMenu{
+  font-size: 14px;
+  padding: 10px 0 5px 0;
+  width: calc(100% - 40px);
+  float: left;
+}
+
+/*----itens de menu lateral icone---*/
+
+.quadroIcon{
+  width: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+.iconQuadro{
+  margin: 0 auto;
+}
+
+.fontIcon{
+  font-size: 11px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 11px;
+
+}
+
+/*---------corpo-----------*/
+
+.corpo{
+
+  overflow: auto;
+  border-radius:15px;
+  z-index: 100;
+  position: fixed;
+  float: left;
+  top: 62px;
+  right:12px;
+  bottom: 12px;
+  padding: 20px;
+}
+#espacoMenu{
+  left: 375px;
+}
+#semMenu{
+  left: 12px;
+}
+
+/*-----dentro do corpo*/
+.txtTituloCorpo{
+  margin: 0;
+
+}

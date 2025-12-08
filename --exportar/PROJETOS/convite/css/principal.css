@@ -1,0 +1,853 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+/*iniciais-------*/
+.imgIniciais{
+  height: 100px;
+  background-size: auto 108%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  text-align: center;
+}
+.letraIniciaisNoivo,
+.letraIniciaisNoiva{
+  font-size: 70px;
+  margin-top: 10px;
+}
+
+.letraIniciaisNoivo{
+  float: left;
+  width: 40%;
+  text-align: right;
+}
+.letraIniciaisNoiva{
+  float:right;
+  width: 40%;
+  text-align: right;
+}
+
+.font_salmos {
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #535e43;
+    font-size: 22px;
+  }
+
+.font_noivos{
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #535e43;
+    font-size: 60px;
+    margin: 0;
+    line-height: 70px;
+    font-style: italic;
+    /*letter-spacing: 3px;*/
+}
+.font_noivos_carta{
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #535e43;
+    font-size: 45px;
+    margin: 0;
+    line-height: 45px;
+    font-style: italic;
+    /*letter-spacing: 3px;*/
+}
+.nome_lef{
+    float: left;
+
+    /*width: calc(50% - 15px);*/
+
+}
+.nome_rig{
+    float: right;
+
+    /*width: calc(50% - 15px);*/
+
+}
+.nome_centro{
+    /*float: left;*/
+
+    width: 30px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.esp_noivos{
+
+    padding-left: 10px;
+}
+.font10{
+    font-size: 23px;
+    color: #535e43;
+    line-height: 40px;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0 auto;
+}
+.caps{
+    padding-left:30px;
+}
+
+iframe{
+    overflow:hidden;
+}
+/*-------*/
+
+.campo_loading2{
+    padding: 20px 0;
+}
+.img_loading2{
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+.txt_loading2{
+    text-align: center;
+    font-size: 18px;
+    color: #535e43;
+    margin: 3px 0 0 5px;
+}
+
+/*abertura----------*/
+.menu_aberto{
+    display: block;
+}
+.fundo_menu_aberto{
+    display: none;
+}
+.menu_fechado{
+    display: block;
+}
+.fundo_menu_fechado{
+    display: none;
+}
+.abre{
+    display: block;
+}
+.fecha{
+    display: none;
+}
+
+/*------cartoes--------*/
+
+.img_cartao1{
+    float:left;
+    width :calc(50% - 20px);
+}
+.img_cartao2{
+    float:right;
+    width :calc(50% - 20px);
+}
+.img_qr_cod{
+    width:100%;
+}
+
+/*---ESPAÇOS PRINCIPAIS--------*/
+
+.topo{padding-top:450px;}
+.bottom{padding-bottom:450px;}
+
+.rodape{clear: both;}
+
+.alinha{
+    width: 1080px;
+    margin: 0 auto;
+    /*background-color: #c00;*/
+}
+
+/*-----ALINHAMENTOS ----*/
+.alinha_600{
+    width: 400px;
+    margin: 20px auto;
+}
+
+.alinha_400{
+    width: 400px;
+    margin: 20px auto;
+}
+
+/*---BNTS COPIAR E CONFIRMAR----*/
+.bnt_copiar1,
+.bnt_copiar2{
+
+    background-position: -630px 0px;
+}
+.bnt_copiar1,
+.bnt_copiar2,
+.bnt_confirmar_compra{
+
+    width: 90px;
+    height: 40px;
+    margin: 0 auto;
+}
+.bnt_confirmar_compra{
+
+    background-position: -708px 0px;
+}
+.bnt_copiar1{
+
+
+}
+.bnt_copiar2{
+    background-color: #535e43;
+    border-radius: 7px;
+
+}
+
+
+/*---------------espaço------------*/
+
+.es_20{
+    padding-bottom: 20px;
+}
+.es_40{
+    padding-bottom: 40px;
+}
+.es_60{
+    padding-bottom: 60px;
+}
+.es_80{
+    padding-bottom: 80px;
+}
+/*------------font------------------*/
+.font1,
+.font2,
+.font2_1,
+.font2_2,
+.font3
+{
+    color: #535e43;
+    margin: 0;
+}
+
+.font1{
+    font-size: 18px;
+    /*font-weight: 100;*/
+}
+.font2{
+    font-size: 16px;
+    /*font-weight: 30;*/
+    line-height: 25px;
+}
+.font2_1{
+    font-size: 14px;
+    /*font-weight: 30;*/
+    line-height: 20px;
+}
+.font2_2{
+    font-size: 12px;
+    /*font-weight: 30;*/
+    line-height: 17px;
+}
+.font3{
+    font-size: 11px;
+    /*font-weight: 30;*/
+    line-height: 15px;
+}
+
+
+.centro{text-align: center;}
+.just{text-align: justify;}
+.direita{text-align: right;}
+
+/*------------img fundo------------*/
+/*.icon_titulo,
+.icon_logo,*/
+.bnt_confirmar_compra,
+.bnt_copiar1,
+.bnt_copiar2,
+.nav_icon,
+.nav_icon2,
+.top_menu,
+.top_logo,
+.top_endereco
+{
+    background-size: auto 100%;
+    background-image: url('../img/icones_times.png');
+    background-repeat: no-repeat;
+}
+.img_menu
+{
+   /* background-size: auto 173%;*/
+    background-size: auto 100%;
+    background-image: url('../img/icones_times.png');
+    background-repeat: no-repeat;
+
+    background-color: #535e43;
+    border-radius: 100px;
+}
+.icon_titulo{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto 0 auto;
+    background-color: #535e43;
+    border-radius: 100px;
+}
+.icon_logo{
+    width: 122px;
+    height: 100px;
+    margin: 0 auto 40px auto;
+}
+/*icones topo*//*
+.t_home{ background-position: -7px 0px;}
+.t_confirmar{ background-position: -85px 0px;}
+.t_presente{ background-position: -163px 0px;}
+.t_localizacao{ background-position: -241px 0px;}
+.t_noivos{ background-position: -320px 0px;}
+.t_presentes{ background-position: -398px 0px;}
+.t_pix{ background-position: -475px 0px;}
+
+
+.t_logo{ background-position: -837px 0px;}
+*/
+
+/*icones menu*/
+/*.m_home{ background-position: -26px -18px;}
+.m_confirmar{ background-position: -110px -18px;}
+.m_presente{ background-position: -195px -18px;}
+.m_localizacao{ background-position: -279px -18px;}
+.m_noivos{ background-position: -364px -18px;}
+.m_presentes{ background-position: -448px -18px; }
+.m_pix{ background-position: -532px -18px; }*/
+
+/*icones nav*/
+
+.n_home{background-position: -4px 0px;}
+.n_confirmar{background-position: -53px 0px;}
+.n_presente{background-position: -102px 0px;}
+.n_localizacao{background-position: -150px 0px;}
+.n_noivos{background-position: -199px 0px;}
+.n_presentes{background-position: -248px 0px;}
+.n_pix{background-position: -297px 0px;}
+.n_copiar{background-position: -347px 0px;}
+.n_fechar{background-position: -1001px 0px;}
+.n_alerta{background-position: -1063px 0px;}
+.n_pre_fotos{background-position: -1136px 0px;}
+
+
+.espaco_img_titulo{
+    width: 130px;
+    margin: 0 auto;
+}
+.img_titulo{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------menu--------------*/
+
+.fundo_div_flutuante{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+.pos_fixa{
+    left: 0;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    z-index: 120;
+    box-shadow: 15px 0 10px -18px #000;
+}
+.caixa_fechar{
+    display: none;
+    position: fixed;
+    width: 150px;
+}
+.navegacao{
+    overflow: auto;
+    height: calc(100% - 80px);
+    margin: 60px 0 20px 0;
+
+}
+.alinha_centro{
+
+    width: 100%;
+    height: calc(100% - 180px);
+}
+.alinha_centro tr{
+
+}
+.alinha_centro tr td{
+    vertical-align: middle;
+
+    width: 100%;
+}
+
+
+.alinha_centro,
+.alinha_centro tr,
+.alinha_centro tr td{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*.nav_espaco{
+    padding-top: 60px;
+}*/
+
+.nav_item{
+    padding: 3px 10px 3px 20px;
+}
+.nav_item_sub{
+    padding: 3px 10px 3px 40px;
+}
+
+.nav_item,
+.nav_item_sub{
+
+}
+.nav_item :hover,
+.nav_item_sub :hover{
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.nav_icon,
+.nav_icon2{
+    height: 50px;
+    width: 50px;
+    float: left;
+
+    border-radius: 8px;
+}
+.nav_icon{
+    opacity: 0.5;
+}
+.nav_txt{
+    font-size: 16px;
+    color: #999;
+    padding-top: 16px;
+}
+.nav_txt2{
+    font-size: 16px;
+    color: #999;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+/* barra flutuante*/
+.barra_menu_top{
+    display: none;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+.top_menu{
+    float: left;
+    height: 50px;
+    width: 90px;
+    background-position: -500px 0px;
+}
+.top_logo{
+    margin:0 auto;
+    height: 50px;
+    width: 90px;
+    background-position: -595px 0px;
+}
+/*.top_endereco{
+    float: right;
+    height: 50px;
+    width: 90px;
+    background-position: -700px 0px;
+    mar
+}*/
+
+/*confirmar compra e carregamento*/
+
+
+
+
+.loading-circle {
+    animation: pulseAndChange 2s infinite ease-in-out;
+  }
+
+  @keyframes pulseAndChange {
+    0% {
+      opacity: 0.1;
+
+    }
+    50% {
+        opacity: 0.3;
+
+    }
+    100% {
+        opacity: 0.6;
+
+    }
+  }
+
+
+
+
+
+/*--------------novo cartão convite--------------------*/
+.pai_noivos1{
+    float: left;
+}
+.pai_noivos2{
+    float: right;
+}
+
+/*------------fundos transparentes da pagina------------------*/
+.FBfoto{
+
+    height: 600px;
+    /*background-color: #000;*/
+    /*background-size: auto 150%;*/
+    background-position: center bottom 30%;
+    background-repeat: no-repeat;
+
+}
+.FBsombra{
+
+    box-shadow:
+    0 0 10px 10px #FFF,
+    0 0 20px 20px #FFF,
+    0 0 30px 30px #FFF,
+    0 0 40px 40px #FFF,
+    0 0 50px 50px #FFF,
+    0 0 60px 60px #FFF;
+}
+.FBespaco{
+    margin-top: -40px;
+}
+
+
+.FBfotoRodape{
+     /* Degradê branco para imagem
+  -webkit-mask-image: linear-gradient(to top, white 0%, transparent 90%);
+  mask-image: linear-gradient(to top, white 0%, transparent 90%);*/
+
+   }
+
+
+
+
+/*------nava data-----------------*/
+
+.dataMes,
+.dataLateral,
+.dataDia,
+.dataAno{
+  text-align: center;
+  margin: 0;
+}
+.dataMes{
+  font-size: 18px;
+}
+.dataLateral{
+  padding: 5px 0;
+  /*border-top: solid 1px;*/
+  border-bottom: solid 0.5px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+.dataDia{
+  font-size: 90px
+}
+.dataAno{
+ font-size: 25px;
+}
+.dataCaixa{
+  float: left;
+  width: 33.333%
+}
+
+
+
+
+
+
+
+/*antigo----------------*/
+.trans_topo{
+    background-image: url('../img/fundo_topo.png');
+    background-size: auto 100%;
+    background-position: bottom;
+}
+.fundo_topo{
+    background-size: auto 98%;
+    background-position: top;
+}
+
+
+.trans_meio{
+    background-image: url('../img/fundo_meio.png');
+    background-size: auto 100%;
+    background-position: center;
+}
+.fundo_meio{
+    background-size: auto 98%;
+    background-position: center
+}
+
+.trans_fim{
+    background-image: url('../img/fundo_final.png');
+    background-size: auto 100%;
+    background-position: top;
+}
+.fundo_fim{
+    background-size: auto 98%;
+    background-position: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------index-------------------*/
+.img_meio{
+    width: 100%;
+
+}
+
+
+
+/*-----------lista de menu---------*/
+.img_menu{
+
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+.lista_menu{
+    float: left;
+    width: 25%;
+
+}
+.lista_bloco_menu{
+
+    margin: auto;
+    padding: 15px 0 15px;
+    cursor: pointer;
+}
+.lista_titulo_menu{
+    font-size: 12px;
+    color: #535e43;
+    text-align:center;
+    margin: 3px 0 0 0;
+
+}
+
+/*--------------contador----------------------*/
+
+.cor_numero{color:#FFF;}
+.cor_descricao{color:#CCC;}
+              /*.cor_fundo{background-color:rgba(000,000,000,0.5);}*/
+              .rodape{
+                  clear:both;
+              }
+              .contador{
+
+              }
+              .bloco_cont{
+                  float:left;
+                  width:25%;
+                  font-family: Arial, Helvetica, sans-serif;
+              }
+              .bloco_cor{
+                  /*padding:20px 0;*/
+                  border-radius:10px;
+                  margin:0 auto;
+                  width: 50px;
+                  height: 50px;
+
+              }/*
+              .bloco_cor_es{
+                  margin:0 10px 0 0;
+              }
+              .bloco_cor_di{
+                  margin:0 0 0 10px;
+              }
+          */
+
+              .quadro_1, .quadro_2{
+                  text-align:center;
+              }
+              .quadro_1{
+                  padding:10px 0 0 0;
+                  font-size:18px;
+                  font-weight:bold;
+                  /*padding:10px 0 3px 0; */
+              }
+              .quadro_2{
+
+                  font-size:10px;
+                  /*padding:0 0 10px 0;*/
+              }
+
+@media (max-width: 1650px) {
+
+    .menu_fechado{display: none;}
+    .fundo_menu_aberto{display: block;}
+    .barra_menu_top{display: block;}
+    .caixa_fechar{
+        display: block;
+    }
+}
+@media (max-width: 1080px) {
+    .alinha{
+        width:auto;
+        padding: 0 20px;
+    }
+}
+
+
+  @media (max-width: 620px) {
+
+    .alinha_600{
+        width: 400px;
+        margin: 20px auto;
+    }
+
+  }
+
+
+  @media (max-width: 440px) {
+    .alinha_400{
+        width: auto;
+        padding: 0 20px;
+    }
+
+
+    .font_noivos{
+        /*font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 400;
+        font-style: normal;
+
+        color: #535e43;
+        font-size: 60px;
+        margin: 0;
+        line-height: 70px;
+        font-style: italic;*/
+        /*letter-spacing: 3px;*/
+        font-size:50px;
+        line-height: 60px;
+    }
+
+
+  }
+   @media (max-width: 380px) {
+
+
+
+    .font_noivos{
+        font-size:40px;
+        line-height: 50px;
+    }
+
+
+  }
+  @media (max-width:350px){
+
+    .pos_fixa{
+        width: auto;
+        right: 20px;
+    }
+  }
+
+
+  @media (max-width:320px){
+
+    /*--datanova---*/
+    .dataMes{
+      font-size: 16px;
+    }
+    .dataLateral{
+
+      font-size: 16px;
+      margin-top: 18px;
+    }
+    .dataDia{
+      font-size: 60px
+    }
+    .dataAno{
+     font-size: 18px;
+    }
+
+  }
+
+
+@media (max-width:290px){
+
+    .nome_centro{
+        width: 40px;
+    }
+    .nome_lef{
+        width: auto;
+
+
+    }
+    .nome_rig{
+        width: auto;
+
+
+    }
+
+    /*--datanova---*/
+    .dataMes{
+      font-size: 14px;
+    }
+    .dataLateral{
+
+      font-size: 12px;
+      margin-top: 18px;
+    }
+    .dataDia{
+      font-size: 60px
+    }
+    .dataAno{
+     font-size: 16px;
+    }
+}

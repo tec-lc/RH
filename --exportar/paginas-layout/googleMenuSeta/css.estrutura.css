@@ -1,0 +1,322 @@
+*{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+body{
+    margin: 0 auto;
+
+
+    background-color: #f1f3f4;
+
+
+}
+.alinha{
+    width: 1920px;
+    margin: 0 auto;
+
+}
+.clear{
+    clear: both;
+}
+
+
+
+.top{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: fixed;
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+}
+
+/*-------dentro do top-------*/
+.bntMenu{
+    float: left;
+    width: 25%;
+}
+.meioTop{
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+}
+.bntLogin{
+    float: right;
+    width: 25%;
+}
+
+/*padrão icone*/
+.iconLogin,
+.iconMenu,
+.iconPes,
+.iconPg,
+.iconItem
+{
+  height: 35px;
+    width: 35px;
+    background-color: #666;
+}
+/*padão emoji*/
+.emojiLogin,
+.emojiMenu,
+.emojiPes,
+.emojiPg,
+.emojiItem
+{
+    font-size: 25px;
+}
+/*padrão txt*/
+.txtLogin,
+.txtMenu,
+.txtPes,
+.txtPg,
+.txtItem
+{
+    font-size: 18px;
+    color: #666;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+
+/*-------dentro bnt menu-------*/
+.iconMenu{
+    float: left;
+    margin-right: 3px;
+}
+.emojiMenu{
+    float: left;
+    margin-right: 3px;
+}
+.txtMenu{
+    float: left;
+}
+/*-------dentro bnt login-------*/
+.iconLogin{
+    float: right;
+    margin-left: 3px;
+}
+.emojiLogin{
+    float: right;
+    margin-left: 3px;
+}
+.txtLogin{
+    float: right;
+}
+
+/*-------dentro meio-------*/
+.iconPg{
+    float: left;
+    margin-right: 3px;
+}
+.emojiPg{
+    float: left;
+    margin-right: 3px;
+}
+.txtPg{
+    float: left;
+}
+.iconPes{
+    float: right;
+    margin-left: 3px;
+}
+.emojiPes{
+    float: right;
+    margin-left: 3px;
+}
+.txtPes{
+    float: right;
+}
+/*-------------------menu flutuante ----------*/
+.painelTransparente{
+    background-color:rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+/*menu e login*/
+.painelMenu,
+.painelLogin
+{
+    min-height: 0;
+    max-height: calc(100% - (60px + 40px));
+    width: 260px;
+    position: fixed;
+    top: 50px;
+    float: left;
+
+    background-color: #FFF;
+    z-index: 200;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    border: solid 0.5px #CCC;
+
+}
+.painelLogin::after{
+    content: "";
+
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 15px solid #FFF;
+    height: 0;
+    width: 0;
+
+    position: absolute;
+
+
+    width: 0;
+    height: 0;
+    top:-14px;
+    right: 15px;
+}
+.painelMenu::after
+{
+    content: "";
+
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 15px solid #FFF;
+    height: 0;
+    width: 0;
+
+    position: absolute;
+
+
+    width: 0;
+    height: 0;
+    top:-14px;
+    left: 15px;
+}
+
+.painelMenu{
+    border-radius: 15px 15px 15px 15px;
+}
+.alinhaLogin{
+    float: right;
+    height: 0;
+    width: 0;
+}
+.painelLogin{
+    margin-left: -260px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.autoRolagem{
+    overflow-y: auto;
+    flex: 1; /* ocupa o espaço restante dentro do painel */
+    min-height: 0;
+    padding: 0 20px;
+
+}
+
+/*----------item de menu-------------*/
+
+.itemMenu{
+    margin: 5px 0;
+}
+.iconItem{
+
+    float: left;
+}
+.emojiItem{
+    float: left;
+}
+.txtItem{
+    float: left;
+}
+
+
+
+
+
+@media (max-width:1920px){
+    .alinha{
+        width: auto;
+    }
+    .alinha1{
+        padding:0 10px;
+    }
+
+}
+@media (max-width:890px){
+    /*-------dentro do top-------*/
+    .bntMenu{
+        width: 15%;
+    }
+    .meioTop{
+        width: 70%;
+    }
+    .bntLogin{
+        width: 15%;
+    }
+
+
+}
+
+@media (max-width:622px){
+    /*-------dentro do top-------*/
+    .bntMenu{
+        width: 25%;
+    }
+    .meioTop{
+        width: 50%;
+    }
+    .bntLogin{
+        width: 25%;
+    }
+
+    .txtPg{
+        display: none;
+    }
+
+}
+
+@media (max-width:400px){
+    /*padrão txt*/
+    .txtLogin,
+    .txtMenu,
+    .txtPes,
+    .txtPg
+    {
+        display: none;
+    }
+
+    /*padrão icone*/
+    .iconLogin,
+    .iconMenu,
+    .iconPes,
+    .iconPg
+    {
+        margin: 0;
+    }
+    /*padão emoji*/
+    .emojiLogin,
+    .emojiMenu,
+    .emojiPes,
+    .emojiPg
+    {
+        margin: 0;
+    }
+
+}
+@media (max-width:281px){
+    /*menu e login*/
+    .painelMenu,
+    .painelLogin
+    {
+        width: auto;
+        left: 10px;
+        right: 10px;
+    }
+    .painelLogin{
+        margin-left:0;
+    }
+
+}
