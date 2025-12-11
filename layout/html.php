@@ -28,6 +28,21 @@ require 'icon/icon.php';
             <div class="iconQuadro"><?=$ICON['icone-fechar']?></div>
         </div>
 
+        
+
+       
+        <a class="linkOff" opr="aplicar" href="?pgw=importabanco">
+          <div class="bntAplicacao"  style="display:none;">
+             Aplicar
+          </div>
+        </a>
+
+
+         <div class="bntApagar" cod_tab="" style="display:none;">
+             Apagar
+          </div>
+
+
         <h1 class="txtTitulo">IDA</h1>
         <!-- Unificação Dados-->
     </div>
@@ -41,22 +56,22 @@ require 'icon/icon.php';
 
   <div class="menu sombra corBacBranco corLinha">
 
-    <div class="menuLateral corBacAzul">
-      <div class="quadroIcon categoria-opcoes" id="">
+    <div class="menuLateral corBacAzul" >
+      <div class="quadroIcon categoria-opcoes" menu="opcoes">
         <div class="iconQuadro"><?=$ICON['icone-filtro']?></div>
         <div class="fontIcon">Opçoes</div>
       </div>
-      <div class="quadroIcon categoria-planilha">
+      <div class="quadroIcon categoria-planilha" menu="planilha">
         <div class="iconQuadro"><?=$ICON['icone-planilha']?></div>
         <div class="fontIcon">Planilha</div>
       </div>
-      <div class="quadroIcon categoria-icone">
+      <div class="quadroIcon categoria-usuario" menu="usuario">
         <div class="iconQuadro"><?=$ICON['icone-login']?></div>
         <div class="fontIcon">Usuario</div>
       </div>
     </div>
 
-    <div class="menuMais caixaCategoria-opcoes">
+    <div class="menuMais caixaCategoria-opcoes" style="display:none;">
 
         <a class="linkOff" href="?pgw=importar">
             <div class="itenMenu subCat-importar">
@@ -75,16 +90,18 @@ require 'icon/icon.php';
         </a>
 
         <a class="linkOff" href="?pgw=informacoes">
-            <div class="itenMenu subCat-informacoes"">
+            <div class="itenMenu subCat-informacoes">
                 <div class="iconFloat"><?=$ICON['icone-duvidas']?></div>
                 <div class="fontMenu">Informações</div>
                 <div class="clear"></div>
             </div>
         </a>
-
-        
-
     </div>
+
+
+    <div class="menuMais caixaCategoria-planilha" style="display:none;">Planilha</div>
+    <div class="menuMais caixaCategoria-usuario" style="display:none;">Usuario</div>
+
     
 
     <div class="clear"></div>

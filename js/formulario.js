@@ -1,105 +1,198 @@
 // garante DOM pronto
+$(function() {
 
-/*$(function() {
-    alert('funciona');
-});*/
+    mapeia_pagina();
+
+    /*
+    // auto preencher mês e ano
+    const now = new Date();
+    $('#mes').val(String(now.getMonth() + 1).padStart(2,'0')); // 01..12
+    $('#ano').val(now.getFullYear());
+    */
+
+    window.abre_tabela = function(nome,cod) {
+        
+        //alert(nome);
+        $.ajax({
+            url: '?pgw=abretabela&tabela='+nome+'&cod='+cod,
+            method: 'GET',
+            success: function (data) {
+                // data: string retornada pelo PHP (com os nomes separados por <->)
+                //$('#status').text(data);
+                //console.log('RETORNO abre_tabela:', data);
+                $('.corpo').html(data);
+                mapeia_pagina('tabela-'+cod);
+                $('.bntAplicacao').attr('style','');
 
 
-$(function(){
-
-
-    //paginação via js
-    var categoria=$('.valor-categoria').val();
-    var pagina = $('.valor-pagina').val();
-    $('.categoria-'+categoria).attr('id','corBacBranco');
-    $('.subCat-'+pagina).attr('id','corBacAzul');
 
 
 
-
-
-   
-  // auto preencher mês e ano
-  const now = new Date();
-  $('#mes').val(String(now.getMonth() + 1).padStart(2,'0')); // 01..12
-  $('#ano').val(now.getFullYear());
-
-  // mostrar nome do arquivo ao escolher
-  $('#fileInput').on('change', function(){
-    const f = this.files && this.files[0];
-    if(f) $('#fileName').text(f.name + ' (' + Math.round(f.size/1024) + ' KB)');
-    else $('#fileName').text('Nenhum arquivo selecionado');
-  });
-
-  // envio com progresso
-  $('#uploadForm').on('submit', function(e){
-    e.preventDefault();
-
-    const input = $('#fileInput')[0];
-    const f = input && input.files && input.files[0];
-    if(!f){
-      $('#status').text('Selecione um arquivo .xlsm antes.');
-      return;
-    }
-    if(f.size > 10 * 1024 * 1024){
-      $('#status').text('Arquivo muito grande. Máx 10MB.');
-      return;
-    }
-
-    const fd = new FormData();
-    fd.append('mes', $('#mes').val());
-    fd.append('ano', $('#ano').val());
-    fd.append('file', f);
-
-    $('#sendBtn').prop('disabled', true).text('Enviando...');
-    $('#status').text('');
-    $('.progress').show();
-
-    $.ajax({
-      url: 'upload.php',
-      method: 'POST',
-      data: fd,
-      processData: false,
-      contentType: false,
-      dataType: 'json',
-      xhr: function(){
-        const xhr = new window.XMLHttpRequest();
-        xhr.upload.addEventListener('progress', function(e){
-          if(e.lengthComputable){
-            const pct = Math.round((e.loaded / e.total) * 100);
-            $('#bar').css('width', pct + '%').attr('aria-valuenow', pct);
-            $('#bar').text(pct + '%'); // opcional: mostra texto
-          }
+                //monta_tabela(data);
+            },
+            error: function (xhr, status, error) {
+                console.error('Erro em abre_tabela:', status, error);
+                //$('#status').text('Erro ao abrir planilha.');
+                
+            }
         });
-        return xhr;
-      },
-      success: function(resp){
-        if(resp && resp.success){
-          $('#status').html('<span style="color: green">Enviado com sucesso.</span>');
-          $('#bar').css('width','100%').attr('aria-valuenow', 100).text('100%');
-        } else {
-          const err = resp && resp.error ? resp.error : 'Resposta inesperada';
-          $('#status').html('<span style="color: red">Erro: ' + err + '</span>');
-        }
-      },
-      error: function(xhr){
-        let msg = 'Erro no envio';
-        try{
-          const j = xhr && xhr.responseJSON;
-          if(j && j.error) msg = j.error;
-        }catch(e){}
-        $('#status').text(msg);
-      },
-      complete: function(){
-        $('#sendBtn').prop('disabled', false).text('Enviar');
-        setTimeout(function(){
-          $('.progress').hide();
-          $('#bar').css('width','0%').attr('aria-valuenow',0).text('');
-        }, 1500);
-      }
-    });
 
-  });
+
+
+    };
+    //-------------------------------------------------
+
+    $(".quadroIcon").click(function(){//categoria
+        mapeia_subMenu($(this).attr('menu'));
+    });
+   
+    //----------------------------------------------------
+    
+    //---------------------------------------------------------
+    function mapeia_subMenu(menu){
+        $('.quadroIcon').attr('id', 'corBacAzulo');
+        $('.categoria-' + menu).attr('id', 'corBacBranco');
+        $('.menuMais').attr('style','display:none;');
+        console.log('.caixaCategoria-'+menu);
+        $('.caixaCategoria-'+menu).attr('style','');
+
+        if(menu=='planilha'){
+            abre_planilha();
+            //abre_tabela('',0);
+        }
+    }
+    // ---------------------------------------------------------
+    function mapeia_pagina(item=false){
+        if(item==false){
+            var categoria = $('.valor-categoria').val();
+            var pagina    = $('.valor-pagina').val();
+            $('.categoria-' + categoria).attr('id', 'corBacBranco');
+            $('.subCat-' + pagina).attr('id', 'corBacAzul');
+            mapeia_subMenu(categoria);
+        }else{//se for tabela
+            $('.itenMenu').attr('id','');//limpa todos
+            $('.subCat-'+item).attr('id','corBacAzul');
+        }
+        
+
+        
+
+    }
+    // ---------------------------------------------------------
+    function monta_htmlBnt(){
+         return `
+            <a class="linkOff" href="?pgw=importabanco">
+                <div class="bntAplicacao">
+                    Salvar no Banco
+                </div>
+            </a>
+        `;
+
+    }
+    //----------------------------------------------------------
+    function monta_html(nome,cod) {
+        // IMPORTANTE: return + string na MESMA expressão
+        return `
+            <div class="itenMenu subCat-tabela-${cod}" onclick="abre_tabela('${nome}','${cod}')">
+                <div class="iconFloat"></div>
+                <div class="fontMenu">${nome}</div>
+                <div class="clear"></div>
+            </div>
+        `;
+
+
+    }
+
+    // ---------------------------------------------------------
+    function mapeia_planilhas(plan) {
+        const partes = plan.split('<->');
+
+        for (let i = 0; i < partes.length; i++) {
+            const nome = partes[i].trim();
+            if (!nome) continue; // ignora vazios (ex: se terminar com <->)
+            $('.caixaCategoria-planilha').append(monta_html(nome,i));
+            
+        }
+
+        
+
+        
+    }
+    // ---------------------------------------------------------
+    function abre_planilha() {
+        //antes de consultar limpa planilha
+        $('.caixaCategoria-planilha').html('');
+        
+
+        $.ajax({
+            url: '?pgw=abreplanilha',
+            method: 'GET',
+            success: function (data) {
+                // data: string retornada pelo PHP (com os nomes separados por <->)
+                $('#status').text(data);
+                console.log('RETORNO abre_planilha:', data);
+                mapeia_planilhas(data);
+                abre_tabela('',0);
+            },
+            error: function (xhr, status, error) {
+                console.error('Erro em abre_planilha:', status, error);
+                $('#status').text('Erro ao abrir planilha.');
+            }
+        });
+    }
+    // ---------------------------------------------------------
+   async function enviarArquivo() { 
+        const input  = document.getElementById('arquivo');
+        const status = document.getElementById('status');
+        var tipo = $('#tipo').val();
+    
+        // Verifica se algum arquivo foi selecionado
+        if (!input.files || input.files.length === 0) {
+            status.textContent = 'Selecione pelo menos um arquivo primeiro.';
+            return;
+        } else if (!tipo) {
+            status.textContent = 'Defina um tipo de documento.';
+            return;
+        }
+
+        const files = input.files; // FileList com todos os arquivos selecionados
+
+        // Monta o FormData para enviar via POST
+        const formData = new FormData();
+
+        // IMPORTANTE: usar arquivo[] para múltiplos arquivos
+        for (let i = 0; i < files.length; i++) {
+            formData.append('arquivo[]', files[i]); 
+        }
+
+        try {
+            status.textContent = 'Enviando...';
+
+            const resposta = await fetch('?pgw=importar/backend&tipo=' + encodeURIComponent(tipo), {
+                method: 'POST',
+                body: formData
+            });
+
+            const texto = await resposta.text();
+            console.log('RETORNO importar/backend:', texto);
+
+            status.textContent = 'Aguarde, abrindo planilha...';
+
+            // depois do upload, chama o backend que lista as planilhas
+            
+            //window.location.href = "?pgw=planilha";
+
+        } catch (erro) {
+            console.error(erro);
+            status.textContent = 'Erro ao enviar arquivo.';
+        }
+    }
+
+
+    //(para usar no onclick do HTML)
+    window.enviarArquivo  = enviarArquivo;
+    window.abre_planilha  = abre_planilha;
+    window.mapeia_planilhas = mapeia_planilhas;
+    window.abre_planilha= abre_tabela;
 
 });
-
